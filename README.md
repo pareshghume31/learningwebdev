@@ -1,2 +1,2 @@
 # learningwebdev
-doing practice of basic web development.
+Doing practice of basic web development.
