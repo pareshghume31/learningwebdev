@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type conversion and destructing.</title>
+  </head>
+  <body>
+    <p>
+      JavaScript Type Conversion JavaScript variables can be converted to a new
+      variable and another data type: By the use of a JavaScript function
+      Automatically by JavaScript itself.
+    </p>
+
+    <img style="border: 1px solid black; margin-left: 20px;" src="images/typeconversion.png" alt="typeconversion">
+
+    <script>
+      console.log(Number("Paresh")); //string will be converted into NaN.
+      console.log(Number(1243));
+      console.log(Math.PI);
+      console.log(Number(" ")); // the empty string will be converted into 0.
+      console.log(Number()); // the empty value will be converted into 0.
+      console.log(Number(null)); // if i pass null parameter into number it will be converted into 0.
+      console.log(Number("34838")); // if i written a nummber in string format it will convert the into number.
+      console.log(Number("45 56")); // if i give a space between two nummber inside string format output will be NaN.
+      console.log(Number(undefined)); // undefined will be converted into NaN.
+      console.log(Number(Object)); // object will be converted into NaN.
+
+      console.log(1 + Number("11")); //output :- 12
+      console.log(1 + "11"); //output :- 111
+      console.log(10 + 10 + "11"); //output:- 2011
+
+      let y = "abc";
+      let x = +y; //The unary + operator can be used to convert a variable to a number:
+      console.log(x); // output:- NaN
+      console.log(typeof x); //output:- number
+
+      let s = String(1754);
+      console.log(typeof s); //The global method String() can convert numbers to strings. It can be used on any type of numbers, literals, variables, or expressions:
+      console.log(typeof String(null)); //output:- string
+      console.log(typeof String(Object)); //output:- string
+      console.log(typeof String(undefined)); //output:- string
+      console.log(typeof String(true)); //output:- string
+      console.log(typeof String(false)); //output:- string
+
+      //Converting Booleans to Numbers
+      console.log(Number(true)); //output:- 1
+      console.log(Number(false)); //output:- 0
+      console.log(true + false); // here javascript will automatically convert true into 1 and false into 0 so ,output :- 1 + 0 = 1.
+
+      // Converting Booleans to Strings The global method String() can convert booleans to strings.
+      console.log(typeof String(false)); //output:- string
+      console.log(typeof String(true)); //output:- string
+
+      //Automatic Type Conversion When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.
+      console.log(5 + null); //output : 5
+      console.log("5" + null); //output : 5null
+      console.log("5" + 23); //output : 523
+      console.log("234" - 12); //output : 222
+      console.log("5" * "45"); //output : 225
+      console.log("32" / "2"); //output : 16
+
+      // let a = Number(12435);
+      // console.log(typeof a);
+    </script>
+  </body>
+</html>
