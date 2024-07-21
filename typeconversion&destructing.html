@@ -12,7 +12,11 @@
       Automatically by JavaScript itself.
     </p>
 
-    <img style="border: 1px solid black; margin-left: 20px;" src="images/typeconversion.png" alt="typeconversion">
+    <img
+      style="border: 1px solid black; margin-left: 20px"
+      src="images/typeconversion.png"
+      alt="typeconversion"
+    />
 
     <script>
       console.log(Number("Paresh")); //string will be converted into NaN.
@@ -62,6 +66,36 @@
 
       // let a = Number(12435);
       // console.log(typeof a);
+
+      // JavaScript Destructuring
+      // The destructuring assignment syntax unpack object properties into variables
+      const fan = {
+        name: "atomberge",
+        price: 2000,
+        speed: "fastest",
+      };
+
+      console.log(fan.name + fan.price + fan.speed); // writing every time object.property name
+
+      let { name, price, speed } = fan; // use object destructing
+      console.log(name + price + speed);
+
+      let { name: n, price: p, speed: sp } = fan; // we can give short name also
+      console.log(`${n} ${p} ${sp}`); //syntax is property name : short name
+
+      // we can create array Destructuring also.
+
+      let myarr = [12, 34, 5, 6, 7, 8, 9];
+
+      let [a1, b1, c1, ...rest] = myarr;
+      console.log(`${a1} ${b1} ${c1} ${rest}`); // first 3 element will be display on console screen
+      // output :- 12,34,5
+      // if you wants to reaming element use rest operator so reaming element will be stroed in rest variable.
+
+      
+      const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+      let [fruit1, , , fruit2] = fruits;
+      console.log(fruits);
     </script>
   </body>
 </html>
