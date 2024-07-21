@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iteration Methods</title>
+  </head>
+  <body>
+    <script>
+      const mobaile = [
+        "samsung",
+        "redmi",
+        "apple",
+        "vivo",
+        "nokia",
+        "motog",
+        "oppo",
+        "gpixel",
+      ];
+
+      mobaile.forEach(function (mval, mindex, marr) {
+        document.write(mval + "<br>");
+        // console.log(mindex);
+        // console.log(marr);
+      });
+
+      const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+      // let finalnum = num.filter(multiply);
+
+      // function multiply(val,index){
+      //     return val * 12;
+      // }
+
+      // console.log(finalnum);
+
+      num.forEach(function (ele) {
+        console.log(ele);
+      });
+
+      const person = [
+        { name: "paresh", age: 20 },
+        { name: "rakesh", age: 21 },
+        { name: "ganesh", age: 20 },
+        { name: "yash", age: 20 },
+        { name: "gagan", age: 22 },
+        { name: "shubham", age: 20 },
+      ];
+
+      //   console.log(person);
+
+      person.forEach(function (value) {
+        console.log(
+          "my name is " + value.name + " im " + value.age + " years old."
+        );
+      });
+
+      const square = [3, 244, 66, 55, 47, 55, 667, 33, 55];
+
+      let numsq = square.map(function (sq) {
+        return sq * 2;
+      });
+
+      console.log(numsq);
+
+      //   square.forEach(function(snm){
+      //     console.log(snm*2);
+      //   });
+
+      const players = [
+        "virat",
+        "rohit",
+        "hardik",
+        "devid",
+        "ravindra",
+        "shikar",
+        "mohit",
+      ];
+
+      let lofplayers = players.map(function (plength) {
+        return plength.length;
+      });
+
+      console.log(lofplayers);
+
+      const flatnum = [23, 56, 7, 9, 10, 6, 4];
+
+      let numeven = flatnum.filter((num) => num % 2 === 0);
+      console.log(numeven);
+
+      let doublenum = flatnum.flatMap((n) => [n, n * 2]);
+      console.log(doublenum);
+
+      const mix = ['paresh',23,'anish','345',56,678,'shubham'];
+
+      let numresult = mix.flatMap((numonly)=> typeof numonly === 'number');
+
+      console.log(numresult);
+
+      const mthree = ['raj','om','oman','sonu','dk','ap'];
+
+      let resultfilter = mthree.filter((l)=>l.length>2);
+
+      console.log(resultfilter);
+
+      const re = [23, 56, 7, 9, 10, 6, 4];
+
+      let total = re.reduceRight((previous,next)=>previous+next,0);
+      console.log(total)
+
+      let mreduce = mthree.reduceRight((mpre,mnext)=> mpre+mnext+' ');
+      console.log(mreduce);
+    </script>
+  </body>
+</html>

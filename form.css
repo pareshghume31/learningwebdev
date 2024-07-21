@@ -1,0 +1,41 @@
+canvas{
+    border: 2px solid black;
+}
+
+ul{
+    background-color: rgba(94, 243, 193, 0.425);
+    padding: 15px 20px;
+}
+
+ul{
+    display: block;
+}
+
+ul li{
+    display: inline;
+    list-style-type: none;
+    /* padding:0px 10px; */
+    /* background-color: #fff; */
+    margin: 0 20px;
+}
+
+
+ul a{
+    text-decoration: none;
+    font-size:18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    padding: 15px 10px;
+}
+
+.active{
+    background-color: rgba(86, 113, 236, 0.596);
+}
+
+a:hover:not(.active,.not){
+    background-color: rgba(102, 241, 195, 0.815);
+}
+
+.not{
+    background-color: rgba(255, 0, 0, 0.623);
+}

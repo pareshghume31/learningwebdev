@@ -1,0 +1,6 @@
+1. pre tag 
+2. marquee tag
+3. quotation element(<blockquote>,<q>, <abbr>, <address>, <cite>, and <bdo>)
+4. picture element (<picture> <source media="" srcset="">)
+5. image mapping
+6. <colgroup> element in table tag

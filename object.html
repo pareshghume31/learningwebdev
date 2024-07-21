@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name : 'paresh',
+            rollno : 10,
+            'gender' : 'male',
+            address : 'chembur',
+            info : function(){
+                return this.name+this.rollno+this.address+this.gender;
+            }
+        };
+
+        console.log(student.info());
+
+        for(data in student){
+            console.log(data+student[data]);
+        }
+
+        document.write(student['gender']);
+        // document.write(student.gender);
+
+        function realestate(location,price,configuration,isavailable){
+            this.rlo  = location,
+            this.rpri =  price,
+            this.rconf = configuration,
+            this.risaa = true,
+            this.rinfo = function(){
+                return this.rlo+this.rpri+this.rconf+this.risaa;
+            }
+        }
+
+        const l1 = new realestate('bandra',200000,'4bhk');
+        console.log(l1);
+
+        // console.clear();
+
+        realestate.prototype.contact = 9137275466;
+
+        console.log(l1.contact);
+
+        // l1.rinfo();
+        console.log(l1.rinfo());
+
+        const marks = {
+             marathi : 50,
+             english : 80,
+             maths : 60,
+             science : 77
+        }
+
+        const studentrecord = Object.assign(student,marks);
+        console.log(studentrecord);
+
+        Object.defineProperty(marks,'history',{value:89});
+
+        console.log(marks);
+
+        marks.history = 45;
+        console.log(marks);
+
+        Object.defineProperties(marks,{
+            'data science' : {value : 69},
+            'ethical hacking' : {value : 89},
+            'datastructure' : {value : 79}
+        })
+
+        console.log(marks);
+
+        console.log(Object.entries(marks));
+        
+        // Object.freeze(student);
+
+        // console.log(Object.isFrozen(student));
+
+        // console.log(Object.fromEntries(marks.english));
+
+        console.log(Object.getOwnPropertyDescriptors(marks));
+
+        console.log(Object.getOwnPropertyNames(marks));
+
+        Object.preventExtensions(student);
+
+        console.log(Object.isExtensible(student));
+
+        student.present = 'yes';
+        console.log(student.present);
+
+        console.log(Object.values(marks));
+        console.log(Object.keys(marks));
+
+
+    </script>
+</body>
+</html>

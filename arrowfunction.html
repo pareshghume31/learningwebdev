@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function</title>
+  </head>
+  <body>
+    <script>
+      const numarr = [10, 20, 30, 40, 50];
+
+      const re = numarr.forEach((value, index, warray) => {
+        console.log(value + " " + index + " " + warray);
+      });
+
+      console.log(re);
+
+      let sum = 0;
+
+      numarr.forEach((val) => (sum += val));
+
+      console.log("Sum of all elements is " + sum);
+
+      const studname = [
+        { name: "paresh" },
+        { name: "gagan" },
+        { name: "ganesh" },
+      ];
+
+      studname.forEach((people, ind) => {
+        people.name += " smith ";
+        console.log(ind);
+      });
+
+      console.log(studname);
+
+      const newarr = numarr.map((val) => val + val);
+      console.log(newarr);
+
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+img{
+    float: right;
+    margin-left:20px;
+    width: 400px;
+}
+
+p{
+    text-align: justify;
+    line-height: 1.5pc;
+}
+
+.clearfix{
+    border: 1px solid black;
+    overflow: auto;
+    margin: 20px 20px;
+}
+
+.inline{
+    background-color: yellow;
+    display: inline;
+    height: 500px;
+    width: 200px;
+}
+
+.inline:hover{
+    background-color: rgb(223, 15, 15);
+}
+
+.inlineb{
+    background-color: yellow;
+    display: inline-block;
+    height: 20px;
+    width: 570px;
+    padding: 20px 20px;
+    margin: 20px 20px;
+}
+
+.block{
+    background-color: yellow;
+    display: block;
+    margin-top: 10px;
+}
+
+div + p {
+    background-color: yellow;
+  }
+
+div ~ p {
+    background-color: yellow;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: rgb(245, 3, 116);
+}
+
+a:hover{
+    color: rgb(11, 240, 202);
+}
+
+a:active{
+    color: red;
+}
+
+p:first-child {
+    color: blue;
+  }
+
+q:lang(no){
+    quotes: "~" "~";
+}
+
+.para::first-line{
+    font-variant: small-caps;
+}
+
+.para::first-letter{
+    color: red;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lpara::first-letter{
+    font-size: 180px;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.lpara::first-line{
+    color:rgba(56, 60, 61, 0.747);
+}
+
+.lpara::after{
+    content: url("emoji.png");
+}
+
+.para{
+    clear: left;
+}
+
+.para::before{
+    content: url("emoji.png");
+}
+
+p.intro{
+    font-size: 20px;
+    color: red;
+    background-color: white;
+}
+
+p.intro::first-letter{
+    font-size: 50px;
+}
+
+::marker{
+    color: teal;
+    font-size: 20px;
+}
+
+.selection::selection{
+    background-color: black;
+    color: white;
+    
+}
+
+.selection{
+    font-size: 18px;
+    font-family:monospace;
+}
+
+.opacity{
+    background-image: url("abd.png");
+    height: 300px;
+    width: 500px;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;border: 1px solid black;
+    background-size:cover;
+    opacity: 0.5;
+}
+
+.opacity p{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding: 100px 0;
+    opacity: 1;
+    background-color: rgba(0, 255, 255, 0.048);
+}
+
+h1{
+    clear: both;
+}
+
+form{
+    margin: 20px auto;
+    padding: 30px 30px;
+    width: 30%;
+    /* background-color: rgb(107, 107, 110); */
+    background-color: white;
+}
+
+label{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(22, 22, 22);
+    text-transform: capitalize;
+}
+
+input{
+    display: block;
+    margin: 15px 0px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+select{
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 15px;
+}
+
+input[type=text]{
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 2px solid rgb(14, 13, 13) ;
+    /* border-radius: 5px; */
+}
+
+input[placeholder]{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: black;
+}
+
+select{
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+select option{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(36, 34, 34);
+
+}
+
+select[value]{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+button{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgba(38, 38, 238, 0.815);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid rgb(245, 243, 243);
+    /* outline: 1px solid blue;
+    outline-offset: 10px; */
+}
+
+.cal{
+    width: max(10px,50%);
+    border: 1px solid black;
+}

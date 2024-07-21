@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Html</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form>
+
+        <label>Enter your name</label>
+        <input type="text" name="name" autocomplete="off" required value="Enter name"><br>
+
+        <label>Choose your favourite language</label><br>
+        <input type="radio" name="favlang" value="marathi">
+        <label>marathi</label><br>
+        <input type="radio" name="favlang" value="english">
+        <label>english</label><br>
+        <input type="radio" name="favlang" value="hindi">
+        <label>hindi</label><br>
+
+        <label>what is your fav dish</label><br>
+        <input type="checkbox" name="fav1" value="dosa">
+        <label>Dosa</label><br>
+        <input type="checkbox" name="fav2" value="pani-puri">
+        <label>pani-puri</label><br>
+        <input type="checkbox" name="fav3" value="samosa">
+        <label>Samosa</label><br>
+
+        <label>choose your favourite car</label><br>
+        <select name="cars" id="cars" size="3" multiple>
+            <!-- <option value="select">select</option> -->
+            <option value="farari">farari</option>
+            <option value="volvo">volvo</option>
+            <option value="BMW">BMW</option>
+            <option value="BMW">tata</option>
+            <option value="audi" selected>audi</option>
+            <option value="mercides">mercides</option>
+        </select><br>
+
+        <label>Enter the message</label><br>
+        <textarea name="message" id="" cols="30" rows="5"></textarea><br>
+
+        <input type="submit" onclick="alert('Hi guys')">
+   
+    </form>
+
+    <br><br>
+
+    <form>
+        <fieldset>
+            <legend>student infomation</legend><br>
+            <input type="text" placeholder="Enter the fitst name"> <br> <br>
+            <input type="text" placeholder="Enter the last name">
+        </fieldset>
+    </form>
+
+    <br><br>
+
+    <form>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        <input type="submit">
+      </form>
+      <br><br><br><br><br>
+
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey;">
+            Sorry, your browser does not support canvas.
+            </canvas>
+            
+            <script>
+            const c = document.getElementById("myCanvas");
+            const ctx = c.getContext("2d");
+            
+            // Create linear gradient
+            const grad=ctx.createLinearGradient(0,0,280,0);
+            grad.addColorStop(0, "lightblue");
+            grad.addColorStop(0.5, "purple");
+            grad.addColorStop(0.8, "red");
+            grad.addColorStop(1, "darkblue"); 
+            
+            // Fill rectangle with gradient
+            ctx.fillStyle = grad;
+            ctx.fillRect(10,10,280,130);
+            </script>
+            <br><br><br>
+            <ul>
+                <a class="active" href="#"><li>home</li></a>
+                <a class="not" href="#"><li>about</li></a>
+                <a href="#"><li>project</li></a>
+                <a href="#"><li>blog</li></a>
+                <a href="#"><li>investor</li></a>
+                <a href="#"><li>contact us</li></a>
+            </ul>
+</body>
+</html>

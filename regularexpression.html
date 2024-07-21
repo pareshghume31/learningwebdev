@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regualr Expression</title>
+  </head>
+  <body>
+    <script>
+      // window.stop()
+      let text =
+        " mynamehellois the best hello FrontendWorld hello im a frontend developer world im 20 years old";
+
+      let regex = new RegExp(/hello/i);
+      let regex1 = /world/i;
+      let regex2 = /\s/;
+      const patt = /frontend/i;
+
+      document.write(regex.test(text));
+      document.write(regex1.test(text));
+
+      console.log(text.match(regex));
+
+      console.log(regex.exec(text));
+
+      console.log(text.search(regex1));
+
+      console.log(text.replace(regex1, "india"));
+
+      console.log(text);
+
+      console.log(text.split(regex1));
+
+      console.log(text.split(regex2));
+
+      document.write("paresh ghume");
+
+      function pall(str) {
+        let o = str;
+        let n = [];
+        for (i = str.length; i > 0; i--) {
+          n.push(str[i]);
+          if (n == o) {
+            document.write("pall");
+          } else {
+            document.write("no pall");
+          }
+        }
+
+        return n;
+      }
+
+      document.write(pall("nan"));
+    </script>
+  </body>
+</html>

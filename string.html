@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      let string = `Hello my name is paresh and im a frontend web developer at TCS company.`;
+      let url = `this is a link ab\uD83D\uDE04c`;
+      let c = 'I am a frontend developer';
+
+      let youtube = "https://www.youtube.com/";
+
+      let a = "reverse reverse";
+      let b = "     R E V E R S E          hi";
+
+      console.log(string);
+
+      console.log(string.length);
+      console.log(url.anchor("https://www.youtube.com/"));
+
+      console.log(`the letter present at index 10 is `, string.at(10));
+      console.log(`the letter present at index -2 is `, string.at(-2));
+
+      console.log(string.big());
+      console.log(string.blink());
+      document.write(string.bold());
+      document.write("<br>");
+      console.log(string.charAt(12));
+      console.log(string.charAt(-12)); //this function not applicable with negative index.
+      console.log(string.charCodeAt(33)); //charCodeAt() method of String values returns an integer between 0 and 65535.
+
+      console.log(string.codePointAt(18));
+      console.log(string.concat(" ", url));
+      console.log(string.endsWith("company."));
+      console.log(string.endsWith("company. "));
+      console.log(string.fixed()); //this string to be displayed in a fixed-width font.
+      document.write(string.fontcolor("red"));
+      document.write("<br>");
+      document.write(string.fontsize("20px"));
+      console.log(string.includes("myname"));
+      console.log(string.indexOf("y"));
+      console.log(string.isWellFormed());
+      document.write("<br>");
+      document.write(string.italics());
+      console.log(string.lastIndexOf("A")); //if not found it will be return -1. else it returns last occurence of the give element.
+      console.log(youtube.link("https://www.youtube.com/"));
+      console.log(a.localeCompare(b));
+      console.log(string.match(/[A-Z]/g));
+      console.log(string.matchAll(/[A-Z]/g));
+
+      //   for(i=0;i<string.length;i++){
+      //     console.log(string.matchAll(['A-z']));
+      //   }
+
+      console.log(a.repeat(10));
+      console.log(a, 'not reversiable');
+      console.log(a.replaceAll('reverse','hello'));
+      console.log(string.slice(10,30));
+      console.log(string.slice(-30,-10));
+      document.write("<br>");
+      document.write(string.small());
+      document.write("<br>");
+      document.write(string.big());
+      console.log(url.startsWith('this',0)); // 1.parameter is searchstring 2.position
+      console.log(url.startsWith('this',2)); // 1.parameter is searchstring 2.position
+      document.write('<br>');
+      document.write(url.strike());
+      document.write('<br>');
+      document.write(url.sub());
+      document.write('<br>');
+      document.write(url.sup());
+      console.log(url.substr(4,12)); 
+      console.log(url.substr(4,-12)); // does not work with  negative  indexing.
+      console.log(url.substr(4)); // if you not mentioned the second parameter it will be return whole  string after the starting position.
+      console.log(url.substring(2,6)); //returns the part of this string from the start index up to and excluding the end index.does not work with  negative  indexing.
+      console.log(c.toLocaleLowerCase());
+      console.log(c.toLocaleUpperCase());
+      console.log(c.toUpperCase());
+      console.log(c.toLowerCase());
+      console.log(b.toString());
+      console.log(a.valueOf());
+      console.log(b.trim());
+      console.log(b); // method removes whitespace from both sides of a string:
+      console.log(b.trimStart());
+      console.log(b.trimRight());
+
+      console.log(b.padStart(40,'0'));
+      console.log(b.padEnd(40,'0'));
+      console.log(c.repeat(10));
+
+
+      console.log(string.__proto__);
+    </script>
+  </body>
+</html>

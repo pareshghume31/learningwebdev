@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sort</title>
+  </head>
+  <body>
+    <script>
+      const foods = [
+        "dosa",
+        "samosa",
+        "vadapav",
+        "dalvada",
+        "idali",
+        "pavbhaji",
+      ];
+      console.log(foods.sort());
+      console.log(foods.reverse());
+      console.log(foods.toSorted());
+      console.log(foods.toReversed());
+
+      function findMax(arr) {
+        if (arr.length === 0) {
+          throw new Error("Array is empty");
+        }
+
+        let max = arr[0]; // Assume the first element is the maximum initially
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i]; // Update max if current element is greater
+          }
+        }
+        return max;
+      }
+
+      // Example usage:
+      const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+      console.log(findMax(numbers)); // Output: 9
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+.flexbox{
+    height: 300px;
+    background-color: rgb(15, 154, 209);
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: column wrap; */
+    align-items: center;
+    overflow: auto;
+}
+
+.flexbox div{
+    padding: 10px 10px;
+    margin: 10px 10px ;
+    background-color: rgba(0, 255, 255, 0.212);
+    height: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.aligncontent{
+    margin-top: 2rem;
+    height: 300px;
+    background-color: rgba(226, 120, 102, 0.589);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.aligncontent div{
+    width: 100px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.267);
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+.newflexbox{
+    margin-top: 2rem;
+    height: 300px;
+    background-color: rgba(236, 16, 211, 0.658);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content:space-between;
+}
+
+.newflexbox div{
+    width: 100px;
+    height: 20px;
+    background-color: rgba(97, 72, 91, 0.459);
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    /* border: 1px solid black; */
+    color: white;
+}
+
+img{
+    cursor:no-drop;
+}
+
+.flexitem{
+    margin-top: 2rem;
+    height: 100px;
+    background-color: rgba(111, 216, 184, 0.658);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexitem div{
+    width: 100px;
+    height: 20px;
+    background-color: rgba(97, 72, 91, 0.459);
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px 10px;
+}

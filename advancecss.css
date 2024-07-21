@@ -1,0 +1,350 @@
+.corners{
+    border-radius: 130px 130px 60px 60px;
+    border: 2px solid black;
+    width: 20%;
+    padding: 30px 30px;
+    height: 300px;
+}
+
+.circle{
+    border-radius:50%;
+    border: 2px solid black;
+    margin: 10px 20px 0;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    outline: 2px solid yellow;
+    outline-offset: 20px;
+    outline-width: 20px;
+}
+
+.border{
+    border: 11px solid transparent;
+    background-image: url("borderimg.png") 30 round ;
+    padding: 50px;
+}
+
+.mimage{
+    background-image: url("abd.png"),url("abd1.png");
+    padding: 130px;
+    background-repeat: no-repeat repeat;
+    background-position: top right;
+    box-sizing: border-box;
+    background-size:none, cover;
+}
+
+.coverimg{
+    background-image: url("abd.png");
+    border: 5px solid black;
+    height: 100px;
+    width: 70%;
+    padding: 30px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    /* background-size: cover; */
+    /* box-sizing: border-box; */
+    background-origin: content-box;
+    /* margin-bottom: 20px; */
+}
+
+.conbox{
+    padding: 30px;
+    width: 50%;
+    border: 20px dotted black;
+    background-color: red;
+    background-clip: padding-box;
+}
+
+.bonbox{
+    padding: 30px;
+    width: 50%;
+    border: 20px dotted black;
+    background-color: red;
+    background-clip:content-box;
+}
+
+.ponbox{
+    padding: 30px;
+    width: 50%;
+    border: 20px dotted black;
+    background-color: red;
+    background-clip: border-box;
+}
+
+.parent{
+    padding: 30px;
+    width: 50%;
+    border: 20px dotted black;
+    background-color: transparent;
+}
+
+.child{
+    padding: 30px;
+    width: 50%;
+    border: 20px dotted black;
+    /* background-color: rgb(129, 119, 119); */
+    background-color: inherit;
+}
+
+.currentcolor{
+    color: red;
+    border: 1px solid currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 20px;
+    background-color: currentColor;
+}
+
+.grad{
+    margin-top: 2rem;
+    height: 300px;
+    width: 500px;
+    border-radius: 1px solid black;
+    background-image: linear-gradient(black,red);
+}
+
+.rightgrad{
+    margin-top: 2rem;
+    height: 300px;
+    width: 500px;
+    border-radius: 1px solid black;
+    background-image: linear-gradient(to bottom right ,black ,red);
+}
+
+.deg{
+    margin-top: 2rem;
+    height: 300px;
+    width: 500px;
+    border-radius: 1px solid black;
+    background-image: linear-gradient(40deg,rgba(0, 0, 255, 0.356),rgba(250, 154, 170, 0.397));
+}
+
+.radial{
+    margin-top: 2rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: radial-gradient(circle,red ,rgba(255, 255, 0, 0.644));
+}
+
+#grad1 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(closest-side at 60% 85%, red, yellow, black);
+  }
+
+.conic{
+    margin-top: 2rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+    /* background-image: conic-gradient(from 90deg ,red,purple,blue,yellow); */
+    /* background-image: conic-gradient(at 0% 0%, red, yellow, green); */
+    background-image: repeating-conic-gradient(red 10%, yellow 20%);
+}
+.box{
+height: 200px;
+width: 400px;
+border: 1px solid black;
+background-color: aqua;
+box-shadow: 10px 10px 10px gray inset;
+}
+
+.overflow{
+    margin-top: 1rem;
+    height: 100px;
+    width: 400px; 
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+span.test2 {
+    writing-mode: vertical-rl; 
+  }
+  
+  p.test2 {
+    writing-mode: vertical-rl; 
+  }
+
+
+
+.abox{
+    height: 200px;
+    width: 400px;
+    border: 1px solid black;
+    background-color: aqua;
+    box-shadow: 10px 10px 10px gray inset;
+    /* transform: translate(120px, 30px); */
+    transform: rotateX(190deg);
+    /* transform: scale(2,3); */
+    /* transform: skew(20deg,20deg); */
+    }
+
+.twod{
+    height: 200px;
+    width: 400px;
+    background-color: rgba(255, 0, 0, 0.315);
+    border: 1px solid black;
+}
+
+.twod:hover{
+    transform: skew(20deg,10deg);
+}
+
+
+.threed{
+    margin-left: 50%;
+    position: absolute;
+    margin-top: 2rem;
+    height: 200px;
+    width: 400px;
+    background-color: rgba(255, 0, 0, 0.315);
+    border: 1px solid black;
+    transition: 1s all ease;
+    
+}
+
+.threed:hover{
+    transform: perspective(100px) rotateY(-180deg);   
+}
+
+.father{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 40%;
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(202, 202, 192, 0.103);
+}
+
+.son{
+    position: absolute;
+    margin-left: 50%;
+    border: 2px solid black;
+    height: 150px;
+    width: 250px;
+    left: 20px;
+    background-color: rgb(139, 132, 132);
+    
+}
+
+.son:hover{
+    transform: perspective(100px) rotateX(45deg);
+}
+
+.transition{
+    margin-top: 2rem;
+    margin-left: 10%;
+    border: 2px solid black;
+    height: 140px;
+    width: 130px;
+    background-color: rgba(247, 247, 28, 0.479);
+    transition: 3s ease-in;
+    transition-delay: 1s;
+}
+
+.transition:hover{
+    width: 600px;
+    height: 400px;
+    /* transform: rotate(180deg); */
+}
+
+h6{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 10%;
+    border: 2px solid black;
+    height: 140px;
+    width: 140px;
+    background-color: rgba(2, 250, 85, 0.623);
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    animation-direction: reverse;
+    animation-play-state: running;
+}
+
+/* @keyframes moving{
+    from {height: 150px; background-color: red;}
+    to {width: 500px; background-color: black;}
+} */
+
+@keyframes moving{
+    0%{background-color: red;}
+    25%{background-color: rgb(201, 99, 99);}
+    50%{background-color: rgb(133, 30, 192);}
+    80%{background-color: rgb(27, 238, 245);}
+    100%{background-color: rgb(238, 9, 135);}
+}
+
+.tooltip{
+    width: 2px;
+    top: 100%;
+    left: 50%;
+    margin-left: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+#abd{
+    margin-left: 40%;
+    max-width: 1000px;
+    height: 300px;
+    filter:brightness(180%);
+    -webkit-box-reflect: left;
+}
+
+.objfit{
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    background-color: rgb(92, 91, 91);
+}
+
+.mask{
+    -webkit-mask-image: url("abd3.png"); 
+    mask-image: url("abd3.png"); 
+  }
+
+.column{
+    column-count: 5;
+    text-align: justify;
+    column-gap: 20px;
+    column-rule: 1px dashed black;
+}
+
+.resize{
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 600px;
+    text-align: justify;
+    overflow: auto;
+    resize: both;
+}
+
+.mainpack{
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 600px;
+    text-align: justify;
+}
+
+:root{
+    --textcolor : rgb(21, 126, 224);
+    --tsize: 29px;
+}
+
+.mainpack h5{
+    color: var(--textcolor);
+    --textcolor : rgb(132, 231, 18);
+    font-size: var(--tsize);
+}
+

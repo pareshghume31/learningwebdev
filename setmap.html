@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set map</title>
+  </head>
+  <body>
+    <script>
+      const myset = new Set([1, 2, 3, 4, 5]);
+
+      console.log(myset);
+      console.log(myset.has(4));
+      console.log(myset.has(14));
+
+      console.log(myset.entries());
+
+      const double = Array.from(myset).filter((val) => {
+        return val > 3;
+      });
+
+      console.log(double);
+
+      myset.add(6);
+
+      console.log(myset);
+
+      console.log(myset.clear());
+
+      console.log(myset);
+
+      myset.add(1);
+      myset.add(2);
+      myset.add(3);
+      myset.add(4);
+      myset.add(5);
+
+      console.log(myset);
+
+      myset.delete(1);
+      console.log(myset);
+
+      myset.forEach((element) => {
+        console.log(element);
+      });
+
+      const num1 = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+      const num2 = new Set([1, 12, 3, 14, 5, 16, 7, 18, 9]);
+
+      console.log(num1.union(num2));
+      console.log(num1.difference(num2));
+      console.log(num1.intersection(num2));
+      console.log(num1.isSubsetOf(num2));
+      console.log(num2.isSubsetOf(num1));
+      console.log(myset.values());
+
+      const mymap = new Map([
+        ["paresh", 10],
+        ["gagan", 11],
+        ["rakesh", 12],
+        ["ganesh", 13],
+      ]);
+
+      console.log(mymap.get("paresh"));
+      console.log(mymap);
+      console.log(mymap.values());
+
+      mymap.forEach((values) => values);
+
+      console.log(mymap.values());
+
+      const mapfilter = Array.from(mymap).filter(([key, value]) => value > 10);
+
+      console.log(mapfilter);
+
+      mapfilter.push(['yash',14]);
+      console.log(mapfilter);
+
+      const maparr = mapfilter.map(([key,val]) => val * 2);
+      console.log(maparr);
+
+      console.log(typeof maparr);
+
+
+      const fruitc = new Map([['apple','red'],['banana','yellow'],['mango','green'],['cherry','red']]);
+
+      console.log(fruitc.values());
+      console.log(fruitc);
+
+      let cityp = new Map([['mumbai',10000],['dehli',4000],['panjab',3000],['banglore',5000]]);
+
+      const useri = new Map([[1,'paresh'],[2,'gagan'],[3,'rakesh'],[4,'ganesh'],[5,'yash']]);
+
+      function checkid(id){
+       if(useri.has(id)){
+        console.log('Id Exists');
+       }
+       else{
+        console.log(`Id doesn't exists`);
+       };
+      }
+
+      checkid(2);
+
+      console.log(useri.entries());
+    </script>
+  </body>
+</html>

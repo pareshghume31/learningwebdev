@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <img src="this.png" alt="this" />
+    <script>
+        
+      function myfunction() {
+        console.log("Hello World");
+      }
+
+      myfunction();
+
+      function addtion(num1, num2) {
+        let result = num1 + num2;
+        console.log(result);
+      }
+
+      addtion(23, 56);
+
+      const multiplication = function (num1, num2) {
+        let total = num1 * num2;
+        return total;
+      };
+
+      console.log(multiplication(23, 56));
+
+      const sum = new Function("a", "b", "return a + b");
+      console.log(sum(2, 6));
+
+      //self invoking function which is immdeailey invoke after the declaartion.
+      (function () {
+        let x = `i'm a self invoking function`;
+        console.log(x);
+      })();
+
+      function addnum(num1 = 0, num2 = 0) {
+        re = num1 + num2;
+        document.write(re);
+      }
+
+      addnum(23, 89);
+
+      function restpara(...restofnum) {
+        let sumofnum = 0;
+        for (n of restofnum) {
+          sumofnum += n;
+        }
+        console.log(sumofnum);
+      }
+
+      restpara(1, 2, 5, 6, 7, 8, 4, 3, 25, 6, 7, 8, 9, 45, 8);
+
+      function thisf() {
+        return this;
+      }
+
+      const x = thisf();
+
+      console.log(x);
+
+      console.log(typeof thisf);
+      console.log(typeof this);
+
+      function info(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+      }
+
+      const myinfo = new info("paresh", "ghume");
+      console.log(myinfo);
+
+      const myfriend = new info("gagan", "gowda");
+      console.log(myfriend);
+
+      const studnfo = {
+        fullname: function () {
+          return this.fname + this.lname;
+        },
+      };
+
+      const stud1 = {
+        fname: "naresh",
+        lname: " kamble",
+      };
+
+      const resultstud = studnfo.fullname.call(stud1);
+      console.log(resultstud);
+
+      const carnfo = {
+        fullname: function (model, price) {
+          return this.fname + this.lname + model + price;
+        },
+      };
+
+      const car1 = {
+        fname: "paresh",
+        lname: " ghume",
+      };
+
+      const resultcar = carnfo.fullname.call(car1, " bmw", " 20lakh");
+      console.log(resultcar);
+
+      const person = {
+        fullName: function (age,gender) {
+          return this.firstName + " " + this.lastName+this.age+this.gender;
+        },
+      };
+
+      const person1 = {
+        firstName: "ganesh",
+        lastName: "Dete ",
+        age : 20,
+        gender : ' male'
+      };
+
+      // console.log(person.fullName.apply(person1,[ 23,' male']));
+
+     const b = person.fullName.bind(person1);
+     console.log(b());
+    </script>
+  </body>
+</html>

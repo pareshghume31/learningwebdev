@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Arrays in javascript.</h2>
+    <p>
+      The join() method in JavaScript is a way to take all the items in an array
+      and turn them into a single string. If you want, you can put a specific
+      character, like a comma or a dash, between each item in the string.
+      Normally, if you don't choose a character, the method will use a comma
+    </p>
+    <p>
+      In summary, slice() is used to extract parts of an array without modifying
+      it, whereas splice() is used to change the content of an array by
+      removing, replacing, or adding elements
+    </p>
+    <img src="slice&splice.png" alt="" />
+    <script>
+      const myarry = [
+        "<br>" + "paresh",
+        "gagan",
+        "ganesh",
+        "rakesh",
+        "vidhan" + "<br>",
+      ];
+      document.write(myarry);
+      let third = myarry[3];
+      document.write(third);
+
+      const myarr = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+      document.write(myarr);
+
+      myarr.push[23]; //hthis method is used to add the element at the end of an array
+      console.log(myarr);
+
+      myarry.pop(); //hthis method is used to remove the element at the end of an array
+      console.log(myarry);
+
+      myarr.unshift(20);
+      console.log(myarr); //hthis method is used to add the element at the start of an array
+
+      myarry.shift(); //hthis method is used to remove the element at the start of an array
+      console.log(myarry);
+
+      let isthere = myarry.includes("gagan"); //return boolean value if element is exists
+      console.log(isthere);
+
+      console.log(myarr.indexOf(6)); //return index number of the element present in the array
+      console.log(myarr.indexOf(20));
+
+      const newarry = myarr.join();
+      console.log(newarry.length);
+      console.log(newarry);
+      console.log(typeof newarry);
+
+      const a = [10, 20, 30, 40, 50, 60];
+      console.log("original arrray " + a);
+      console.log("used slice method " + a.slice(1, 4));
+      console.log("after using slice method original arrray remains same " + a);
+
+      const b = [100, 200, 300, 400, 500, 600];
+      console.log("original arrray " + b);
+      console.log("used slice method " + b.splice(1, 4));
+      console.log("after using splice method original array is changed " + b);
+
+      // for(i=0;i<a.length;i++){
+      //     console.log(a[i]);
+      // }
+
+      for (let num of a) {
+        console.log(num);
+      }
+
+      let le = a.toString();
+      console.log(le.length);
+      
+
+      function bubbleSort(arr) {
+        let n = arr.length;
+        for (let i = 0; i < n - 1; i++) {
+          for (let j = 0; j < n - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+              // Swap arr[j] and arr[j + 1]
+              let temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        return arr;
+      }
+
+      // Example usage:
+      let array = [64, 34, 25, 12, 22, 11, 90];
+      console.log(bubbleSort(array)); // Output: [11, 12, 22, 25, 34, 64, 90]
+    </script>
+  </body>
+</html>

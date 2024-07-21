@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class in HTML</title>
+  </head>
+  <body>
+    <script>
+      // class student{
+      //     constructor(name,rollno){
+      //         this.name = name;
+      //         this.rollno = rollno;
+      //     }
+
+      //     user(){
+      //         return this.name.toUpperCase();
+      //     }
+      // };
+      // const stud1 = new student("Paresh",20);
+
+      // console.log(stud1.user());
+
+      class user {
+        constructor(username) {
+          this.username = username;
+        }
+
+        logme() {
+          console.log(`username is ${this.username}`);
+        }
+      }
+
+      class teacher extends user {
+        constructor(username, email, password) {
+          // super(username)
+          super(username);
+          this.emial = email;
+          this.password = password;
+        }
+
+        addcourse() {
+          console.log("the new course was added by " + this.username);
+        }
+      }
+
+      const t1 = new teacher("Paresh", "pareshghume31@gmail.com", "parya@123");
+      const t2 = new teacher("Raresh", "Rareshghume31@gmail.com", "rarya@123");
+
+      t1.addcourse();
+      t2.addcourse();
+
+      const t3 = new user("gagan");
+      t3.logme();
+
+      const t4 = new user("ganesh");
+
+      // t4.addcourse();
+
+      console.log(typeof t1);
+      console.log(typeof teacher);
+
+      class car {
+        constructor(name) {
+          this.name = name;
+        }
+
+        callme() {
+          console.log("username is " + this.name);
+        }
+
+        static id() {
+          return 1;
+        }
+      }
+
+      const audi = new car("Audi");
+      audi.callme();
+
+      console.log(car.id());
+
+      const bmw = new car("bmw");
+      console.log(car.id());
+
+      class bike extends car {
+        constructor(name, email) {
+          super(name);
+          this.email = email;
+        }
+      }
+
+      const c1 = new bike("paresh", "p@gmail.com");
+      c1.callme();
+
+    //   console.log(c1.id());
+
+      class laptop{
+        
+        constructor(modelno, name, price, storage) {
+          this.modelno = modelno;
+          this.name = name;
+          this.price = price;
+          this.storage = storage;
+          console.log('this is mobile and laptop manufautred company');
+        }
+
+        videoedting(){
+            console.log('this is best laptop/phone for video editing');
+        }
+
+        gaming(){
+            console.log('this is best laptop/phone for gaming');
+        }
+
+      };
+
+      const samsung = new laptop(1001,'samsung','40k','500gb');
+      console.log(samsung);
+
+      class mobile extends laptop{
+        constructor(modelno,name,price,storage,ram){
+            super(modelno,name,price,storage);
+            // super(name);
+            // super(price);
+            this.ram = ram;
+        };
+
+        
+      }
+
+      const iphone = new mobile(2001,'iphone15','80k','12gbram','1tb');
+      console.log(iphone);
+
+      iphone.videoedting();
+      iphone.gaming();
+
+      console.log(typeof mobile );
+
+      const redmi = new mobile(2002,"redminote7",'20k','8gb','400gb');
+      console.log(redmi);
+
+    </script>
+  </body>
+</html>

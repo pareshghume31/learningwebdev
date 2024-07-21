@@ -1,0 +1,80 @@
+/* @media (min-width:300px) and (max-width:700px){
+    body{
+        background-color: aqua;
+    }
+} */
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 20px 20px;
+}
+
+.box .item{
+    background-color: teal;
+    color: white;
+    padding: 30px 30px;
+    border-radius: 2px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box .item10{
+        background-color: teal;
+        color: white;
+        padding: 30px 30px;
+        border-radius: 2px;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media (max-width: 500px) {
+    .box{
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(255, 0, 0, 0.137);
+        box-sizing: border-box;
+        gap: 20px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .box{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (min-width:540px) and (max-width:720px){
+    .box{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .box .item10{
+        flex-grow: 4;
+        text-align: center;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1366px){
+    .box{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width:100px) and (max-width:200px) {
+    .box .item{
+        padding: 10px 10px;
+    }
+
+    .box .item10{
+        padding: 10px 10px;
+    }
+}
+

@@ -1,0 +1,16 @@
+.container{
+    height: 340px;
+    width: 688px;
+    border: 2px solid black;
+    background-color: rgb(253, 253, 253);
+}
+
+img{
+    width: 688px;
+    height: 340px;
+    /* object-fit: contain; */
+    object-fit: cover;
+    /* object-position: top right;  */
+    /* object-position: top right; */
+    object-position: 80% 80%;
+}

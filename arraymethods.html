@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+  </head>
+  <body>
+
+    <h3>learn copywith() and toSpliced() array methods.</h3>
+    <script>
+      //     const cricteam = {
+      //     ind: {
+      //         rohit: 45,
+      //         virat: 18,
+      //         msd: 7,
+      //         won : function(){
+      //             return "India is better than us"
+      //         }
+      //     },
+      //     aus: {
+      //         devid: 15,
+      //         travis: 45,
+      //         marsh: 722,
+      //     },
+      //     sa: {
+      //         abd: 17,
+      //         ammla: 10,
+      //         decock: 722,
+      //     },
+      //     westi: {
+      //         gayle: 65,
+      //         bravo: 28,
+      //         pollard: 97,
+      //     }
+      // }
+
+      // console.log(Object.values(cricteam.ind));
+
+      // const arr1 = [12,3,4,5,6];
+      // const arr2 = [112,13,14,15,16];
+      // const arr3 = ['paresh','gagan','rakesh','ganesh'];
+
+      // const arr4 = arr1.concat(arr2,arr3);
+      // console.log(arr4)
+      // console.log(arr4.toString())
+      // console.log("The length of arr4 is " + arr4.length)
+      // const arr5 = arr3.flat();
+      // console.log(arr5);
+      // arr1.push(122);
+      // console.log(arr1);
+      // console.log(arr1.pop());
+      // console.log(arr1);
+
+      // for(let val of arr3){
+      //     console.log(val)
+      // }
+
+      // let s = arr1.sort()
+      // console.log(s);
+
+      const myobj = {};
+      myobj.name = "paresh ";
+      myobj.age = 20;
+      myobj.address = " chembur ";
+      function fullname() {
+        return myobj.name + myobj.age + myobj.address;
+      }
+
+      // document.write(fullname());
+      // document.write(myobj['name']);
+      console.log(myobj);
+
+      const car = {
+        name: "bmw",
+        modelno: 1101,
+        price: 20000,
+        location: "mumbai",
+        owener: {
+          name: "mr.roy",
+          age: 40,
+          country: "canada",
+        },
+      };
+
+    //   document.write(car.location);
+      // console.log(car["location"]);
+      const str = JSON.stringify(car.name);
+      // console.log(str);
+      // console.log(str.length);
+      // console.log(typeof car)
+
+      // for (let i in car) {
+      //   console.log("property name is " + i + " property value is " + car[i]);
+      // }
+
+      for (let m in car.owener) {
+        console.log(
+          "property name is " + m + " property value is " + car.owener[m]
+        );
+      }
+
+      car.owener.name = 'mr.harvey';
+      // console.log(car.owener.name)
+
+      car.speed = "300km/hr";
+      // console.log(car.speed);
+
+
+      function studinfo(name,age,address,gender,rollno){
+        this.sname = name,
+        this.sage = age,
+        this.saddress = address,
+        this.sgender = gender,
+        this.srollno =rollno,
+        this.getinfo = function (){
+            return "Hello friends my name is " + this.sname + " i am " + this.sage + " years old " + 
+            " i am living in " + this.saddress + " and my roll no is " + rollno + ".";
+        }
+      }
+
+      const stud1 = new studinfo('paresh',20,'chembur','male',10);
+      const stud2 = new studinfo('gagan',20,'govandi','male',11);
+      const stud3 = new studinfo('rakesh',20,'nagpur','male',12);
+      const stud4 = new studinfo('ganesh',20,'pune','male',13);
+      const stud5 = new studinfo('yash',20,'vashi','male',14);
+      // console.log(stud1);
+      // console.log(stud2);
+      // console.log(stud3);
+      // console.log(stud4);
+      // console.log(stud5);
+
+      // studinfo.prototype.mname = 'mummy';
+      // console.log(stud1.mname);
+      // console.log(stud1);
+
+      // console.log(stud1.getinfo());
+      // console.log(stud2.getinfo());
+      // console.log(stud3.getinfo());
+      // console.log(stud4.getinfo());
+      // console.log(stud5.getinfo());
+      
+      const country = ["india","USA","china","japan","UAE","Russia","Qatar","canada","Pland","Brazil"];
+      const country1 = ["BMW","Audi"];
+      const country2 = ['paresh','gagan'];
+      document.write("Length of Country is " + country.length + "<br>"); 
+      document.write(country.toString());
+      let tostring = country1.toString();
+      document.write("<br>" + " length of the whole string is " + tostring.length + "<br>");
+      document.write("the element present at 5th positon is " + country.at(5)+"<br>");
+      document.write(country.join('|'))
+      let j = country1.join('abc');
+      document.write("<br>"+j)
+      document.write("<br>"+j.length+"<br>")
+      country.push("Argentina");
+      document.write(country+"<br>");
+      country.pop();
+      document.write(country + "<br>");
+      country.shift();
+      document.write(country + "<br>");
+      // country[3] = 'paresh';
+      // document.write(country);
+      country.unshift("irland")
+      document.write(country);
+
+      delete country[4];
+      document.write("<br>"+country);
+
+      const newarr = country.concat(...country1,...country2);
+      document.write("<br>"+newarr);
+
+      document.write(newarr.length);
+
+      const multi = [[10,20],['abc','pqr'],[456,744]];
+      document.write("<br>"+multi);
+      document.write(multi.length+"<br>");
+      document.write(typeof multi)
+
+      let f = multi.flat();
+      document.write(f);
+      document.write("<br>"+f.length+"<br>");
+
+      const num = [1,2,3,4,5,6,7,8,9,10];
+      document.write(num.slice(0,6));
+
+      document.write("<br>"+num);
+
+      const newnum = [10,20,30,40,50,60,70,80,90,100];
+      document.write("<br>"+newnum.splice(0,5));
+
+      document.write("<br>"+newnum);
+
+      document.write("<br>"+num.toSpliced(1,3))
+      // document.write("<br>"+num.toSpliced(4,8))
+      
+    </script>
+  </body>
+</html>

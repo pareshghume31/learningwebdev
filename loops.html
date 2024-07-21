@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let num = 5;
+      // let t = 0;
+      // for (let i = 1; i <= num; i++) {
+      //   t = t + i;
+      // }
+
+      // document.write(t);
+
+      // let fact = 6;
+      // let total = 1;
+      // for (i = 1; i <= fact; i++) {
+      //   total = total * i;
+      // }
+
+      // document.write("Factorial of a number is " + total + "<br>");
+
+      // let a = 0;
+      // let b = 1;
+      // console.log(a);
+      // console.log(b);
+
+      // for (i = 2; i <= 10; i++) {
+      //   next = a + b;
+      //   console.log(next);
+      //   a = b;
+      //   b = next;
+      // }
+
+      // const str = "hellolajs";
+      // for (let i = str.length - 1; i >= 0; i--) {
+      //   console.log(str[i]);
+      // }
+
+      // for (i = 1; i <= 10; i++) {
+      //   document.write("square of " + i + " is " + i * i + "<br>");
+      // }
+
+      // const str1 = "aaj";
+      // const vowels = "aeiou";
+      // let count = 0;
+      // for (let i = 0; i < str.length; i++) {
+      //   if (vowels.includes(str1[i])) {
+      //     count++;
+      //   }
+      // }
+      // console.log(count);
+
+      // let table = 5;
+      // for (i = 1; i <= 10; i++) {
+      //   console.log(table * i);
+      // }
+
+      // for (i = 10; i >= 0; i--) {
+      //   console.log(i);
+      // }
+
+      // const numbers = [1, 2, 3, 4, 5];
+      // var newarr = [];
+      // for (let i = 0; i < numbers.length; i++) {
+      //  newarr += (numbers[i] * 2);
+      // }
+
+      // console.log(newarr)
+      // console.log(typeof newarr)
+
+      var myarr = [1, 45, 67, 8, 5, 3, 56, 86];
+      for (var i = 0; i <= myarr.length - 1; i++) {
+        document.write("index postion of " + myarr[i] + " is " + i + "<br>");
+      }
+
+      myarr.forEach(function (c, i, a) {
+        document.write(c, i, a + "<br>");
+      });
+
+      for (var a of myarr) {
+        document.write(a + "<br>");
+      }
+
+      const abc = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        e: 5,
+      };
+
+      for (var v in abc) {
+        document.write("key is " + v + " and the value is " + abc[v] + "<br>");
+      }
+
+      const abcd = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        e: 5,
+      };
+
+      for (let key in abcd) {
+        if (abcd.hasOwnProperty(key)) {
+          console.log("Key: " + key + ", Value: " + abcd[key]);
+        }
+      }
+
+      document.write("Even number form 0 to 20 is ");
+      for (let i = 0; i <= 20; i += 2) {
+        document.write(i + "<br>");
+      }
+
+      // const fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+      // for(let val in fruits){
+      //   document.write(val+fruits[val])
+      // }
+
+      const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+      for (let value of fruits) {
+        document.write(value + "<br>");
+      }
+
+      const studentGrades = {
+        John: "A",
+        Mary: "B",
+        Paul: "C",
+        Sarah: "A",
+      };
+
+      for (grade in studentGrades) {
+        console.log(grade + " got " + studentGrades[grade] + " grade.");
+      }
+
+      const numbers = [1, 2, 3, 4, 5];
+      numbers.forEach(function (value) {
+        document.write(value * value + "<br>");
+      });
+
+      let totaloh = 0;
+      for (i = 1; i <= 100; i++) {
+        totaloh += i;
+      }
+
+      document.write("sum of 1 to 100 is " + totaloh + "<br>");
+
+      // const words = ["apple", "banana", "cherry", "date", "elderberry"];
+      // let long = "";
+      // for (let len of words) {
+      //   if (len.length > long.length) {
+      //     long = len;
+      //   }
+      // }
+
+      // console.log(long);
+
+      const words = ["apple", "banana", "cherry", "date", "elderberry"];
+      let longestWord = "";
+
+      for (const word of words) {
+        if (word.length > longestWord.length) {
+          longestWord = word;
+        }
+      }
+
+      console.log(longestWord);
+
+      const car = {
+        make: "Toyota",
+        model: "Corolla",
+        year: 2020,
+        color: "blue",
+      };
+
+      let propertyCount = 0;
+      for (const prop in car) {
+        propertyCount++;
+      }
+
+      console.log(propertyCount);
+
+      const properties = {
+        chembur: "2bhk",
+        vashi: "4bhk",
+        bandra: "3bhk",
+        vasai: "5bhk",
+      };
+
+      console.log(properties);
+
+      for (values in properties) {
+        console.log(values + " " + properties[values]);
+      }
+
+      document.write(properties["vasai"]);
+
+      const sym = Symbol("key");
+      const obj = {
+        [sym]: "value",
+      };
+
+      console.log(obj);
+
+      function collectionofcar(name, price, speed, color) {
+        (this.cname = name),
+          (this.cprice = price),
+          (this.cspeed = speed),
+          (this.color = "black");
+      }
+
+      const bmw = new collectionofcar("BMW", "20lakh", "300km/hr");
+      console.log(bmw);
+
+      const mercedes = new collectionofcar("mercedes", "2.5cr", "350km/hr");
+      console.log(mercedes);
+
+      document.write(properties.vashi);
+      document.write(properties["chembur"]);
+
+      const teams = [
+        { name: "india", captain: "rohit", age: 40, trophy: 4 },
+        { name: "australia", captain: "warner", age: 45, trophy: 3 },
+        { name: "southafrica", captain: "abd", age: 39, trophy: 2 },
+        { name: "england", captain: "jo-root", age: 55, trophy: 4 },
+      ];
+
+      for (let i = 0; i < teams.length; i++) {
+        document.write(
+          teams[i].name + " " + teams[i].captain + " " + teams[i].age
+        );
+        document.write("<br>");
+      }
+
+      const myperson = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "EN",
+      };
+
+      console.log(Object.getOwnPropertyNames(myperson));
+      console.log(Object.defineProperty(myperson, "age", { value: 20 }));
+      Object.defineProperties(myperson, {
+        language: { value: "en" },
+        year: { value: "Hello" },
+      });
+
+      myperson.age = 30;
+      console.log(myperson.age);
+    </script>
+  </body>
+</html>

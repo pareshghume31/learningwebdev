@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(248, 243, 243);
+}
+
+.container{
+   background-color: white;
+   width: 50%;
+   height: 840px;
+}
+
+header{
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-weight: bold;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+
+form label{
+    margin-top: 2rem;
+    font-size: 16px;
+    color: rgba(20, 19, 19, 0.795);
+}
+
+form select{
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+form select:hover{
+    border-color: blue;
+}
+
+select option{
+    font-size: 18px;
+    font-weight: lighter;
+    color: rgb(31, 29, 29);
+}
+
+form input{
+    margin-top: 10px;
+    width: 50%;
+    height: 40px;
+}
+
+form textarea{
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 2rem;
+    background-color: blue;
+    font-size: 18px;
+    padding: 10px 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+form .hav{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 2rem;
+}
+

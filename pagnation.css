@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pagination{
+    display: inline-block;
+}
+
+.pagination a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px 20px;
+    color: black;
+    cursor: pointer;
+    border: 0.8px solid rgba(184, 177, 177, 0.658);
+    margin: 0 10px;
+    float: left;
+}
+
+.pagination a:first-child{
+    background-color: rgba(131, 181, 224, 0.616);
+}
+
+.pagination a:last-child{
+    background-color: rgba(131, 181, 224, 0.616);
+}
+
+.pagination .active{
+    background-color: #4CAF50;
+    border: .5px solid rgba(179, 172, 172, 0.774);
+}
+
+.pagination a:hover:not(.active,.first,.last){
+    background-color: rgba(202, 204, 206, 0.514);
+}

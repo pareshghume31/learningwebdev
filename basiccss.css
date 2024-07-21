@@ -1,0 +1,260 @@
+img{
+    border: 1px solid rgb(5, 5, 5);
+    width: 55%;
+    margin-top: 2rem;
+}
+
+body{
+    background-color: rgba(251, 253, 251, 0.74);
+    /* margin: 50px 50px; */
+}
+
+/* ol{
+    background-image: url(abd.png);
+    background-repeat: no-repeat;
+} */
+
+.pic{
+    border: 1px solid rgb(8, 8, 8);
+    height: 450px;
+    width: 500px;
+    background-image: url("abd.png");
+    background-repeat: no-repeat;
+    background-position: 10px 40px;
+}
+
+.pic1{
+    background-image: url("abd1.png");
+    height: 300px;
+    width: 100%;
+    border: 1px solid black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* body {
+    background-image: url("abd1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+  } */
+
+/* shorthand property */
+
+  /* body {
+    background: #ffffff url("abd.png") no-repeat right top;
+  } */
+
+.margin{
+    border:2px dashed black;
+    height: 300px;
+    width: 50%;
+    margin: 30px 40px 10px;
+    border-radius: 1px;
+}
+
+.margin p{
+    margin: inherit;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5rem;
+}
+
+h1{
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+h2{
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+.padding{
+    border: 1px solid black;
+    margin: auto;
+    width: 50%;
+    height: 180px;
+    padding: 80px 30px 50px 60px;
+}
+
+.paddingw{
+    border: 1px solid black;
+    width: 500px;
+    padding: 20px;
+}
+
+.boxsizing{
+    border: 1px solid black;
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.normal{
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+.boxmodel{
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    outline: 5px dashed red;
+    outline-offset: 15px;
+}
+
+.l{
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+    text-align-last: center;
+    text-transform: uppercase;
+    line-height: 2rem;
+    font-family: "Sofia", sans-serif;
+}
+
+p{
+    direction: rtl;
+    unicode-bidi:bidi-override;
+    text-indent: -20px;
+}
+
+span{
+    vertical-align: super;
+}
+
+h6{
+    font-size: 30px;
+    color: rgb(7, 7, 7);
+    text-shadow: 4px 4px 5px rgb(243, 18, 18);
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
+}
+
+a{
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid rgb(98, 228, 245);
+    cursor: progress;
+}
+
+a:hover{
+    background-color: rgb(98, 228, 245);
+}
+
+ul{
+    /* list-style-image: url("abd.png"); */
+    /* list-style-position: inside; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #070707;
+}
+
+th{
+    border-top:1px solid black;
+    background-color: #53d417;
+}
+
+tr:hover{
+    background-color: aquamarine;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(113, 148, 136);
+}
+
+div{
+    overflow-x: auto;
+}
+
+.static{
+    position: static;
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.relative{
+    position: relative;
+    top:10px;
+    left: 20%;
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.fixed{
+    position: fixed;
+    /* top: 90%;/ */
+    right: 1%;
+    bottom: 0;
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.absoulate{
+    position: relative;
+    height: 200px;
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.absoulate p{
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    border: 1px solid black;
+    width: 70%;
+    text-align: justify;
+    direction: ltr;
+    text-indent: 0;
+    padding: 10px 10px;
+}
+
+.sticky{
+    position: sticky;
+    top:10px;
+    left: 30%;
+    /* bottom: 20px; */
+    border: 10px solid rgb(162, 180, 140);
+    width: 500px; 
+    margin: 20px 20px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.overflow{
+    border:1px solid black;
+    width: 50%;
+    height: 300px;
+    overflow: scroll;
+}
+
