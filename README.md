@@ -6,3 +6,5 @@ My goal is to push all my content to GitHub, creating a resource that anyone int
 Feel free to explore my repositories, provide feedback, and contribute to the projects. Let's learn and grow together in the world of web development!
 
 Let me know if you'd like any further adjustments!
+
+<b>NOTE :- all the javascript code are written inside <script></script> tag in .html file.</b>
