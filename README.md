@@ -7,4 +7,4 @@ Feel free to explore my repositories, provide feedback, and contribute to the pr
 
 Let me know if you'd like any further adjustments!
 
-<b>NOTE :- all the javascript code are written inside <script></script> tag in .html file.</b>
+<b>NOTE :- All the javascript code are written inside <script></script> tag in .html file.</b>
