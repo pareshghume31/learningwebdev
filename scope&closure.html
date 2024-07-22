@@ -13,6 +13,10 @@
       an inner function. In JavaScript, closures are created every time a
       function is created, at function creation time</b
     >
+    <br />
+    <button id="counterButton">Click me</button>
+    <p>Count: <span id="count">0</span></p>
+
     <script>
       function init() {
         var name = "Mozilla@123";
@@ -36,7 +40,7 @@
         function innner() {
           let bikename = "yamaha";
           console.log(carname);
-        //   console.log(private);
+          //   console.log(private);
           function innertoo() {
             // let private = 'abc@123';
             console.log(carname);
@@ -54,11 +58,26 @@
       //outer function can access inside inner function. but inner function cannot access the variable
       //present inside the innertoo function.
 
-      // The lexical scope of innertoo function is outer funcion and inner function also, all the variable 
-      // is declared inside the outer function and inner function can access inside innertoo function. but 
+      // The lexical scope of innertoo function is outer funcion and inner function also, all the variable
+      // is declared inside the outer function and inner function can access inside innertoo function. but
       // when we declare varialbe in innertoo function that cannot be access by outer and inner function.
 
       //thats is the reason , the above private variable won't access from outer and inner function.
+
+      function createCounter() {
+        let count = 0;
+        return function () {
+          count += 1;
+          return count;
+        };
+      }
+
+      const counter = createCounter();
+
+      document.getElementById("counterButton").onclick = function () {
+        const currentCount = counter();
+        document.getElementById("count").textContent = currentCount;
+      };
     </script>
   </body>
 </html>
