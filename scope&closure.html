@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <b
+      >A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment). In
+      other words, a closure gives you access to an outer function's scope from
+      an inner function. In JavaScript, closures are created every time a
+      function is created, at function creation time</b
+    >
+    <script>
+      function init() {
+        var name = "Mozilla@123";
+        function displayName() {
+          console.log(name);
+        }
+        displayName();
+      }
+
+      init();
+
+      //init() creates a local variable called name and a function called displayName(). The displayName
+      //function is an inner function that is defined inside init() and is available only within the body
+      //of the init() function. Note that the displayName() function has no local variables of its own.
+      //However, since inner functions have access to the variables of outer functions, displayName() can
+      //access the variable name declared in the parent function, init().
+
+      function outer() {
+        let carname = "BMW";
+        // console.log(private);
+        function innner() {
+          let bikename = "yamaha";
+          console.log(carname);
+        //   console.log(private);
+          function innertoo() {
+            // let private = 'abc@123';
+            console.log(carname);
+            console.log(bikename);
+          }
+          innertoo();
+        }
+        innner();
+      }
+      outer();
+
+      // in above outer function we can easily access carname within its inner and innertoo  function.
+
+      // The lexical scope of inner function is outer funcion , all the variable is declared inside the
+      //outer function can access inside inner function. but inner function cannot access the variable
+      //present inside the innertoo function.
+
+      // The lexical scope of innertoo function is outer funcion and inner function also, all the variable 
+      // is declared inside the outer function and inner function can access inside innertoo function. but 
+      // when we declare varialbe in innertoo function that cannot be access by outer and inner function.
+
+      //thats is the reason , the above private variable won't access from outer and inner function.
+    </script>
+  </body>
+</html>
