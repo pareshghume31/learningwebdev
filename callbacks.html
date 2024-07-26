@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback & Callback hell</title>
+  </head>
+  <body>
+    <h2>callback defination</h2>
+    <b
+      >A <mark>callback function</mark> is a function that is passed as an
+      argument to another function and is executed after some operation has been
+      completed. Callbacks are used to handle asynchronous operations, such as
+      reading files, making network requests, or processing timers.</b
+    >
+
+    <h2>callback hell defination</h2>
+    <b>
+      <mark>callback hell (also known as the "Pyramid of Doom")</mark> refers to
+      the situation where callbacks are nested within other callbacks multiple
+      levels deep, making the code hard to read and maintain. It often occurs
+      when handling multiple asynchronous operations that depend on each
+      other.</b
+    >
+
+    <p>NOTE: To implement error handling in the callback hell scenario, you can pass an error object or a message to the callback functions. </p>
+
+    <script>
+      // Example of callback function.
+      function orderPizza(pizzaType, callback) {
+        console.log(`Order placed for ${pizzaType} pizza.`);
+        setTimeout(() => {
+          console.log(`${pizzaType} pizza delivered.`);
+          callback();
+        }, 3000); // Simulating a 3-second delay for pizza delivery
+      }
+
+      function notifyCustomer() {
+        console.log("Customer notified: Your pizza is here!");
+      }
+
+      // Placing an order for a pizza and passing notifyCustomer as the callback function
+      orderPizza("Margherita", notifyCustomer);
+
+      //Example of callback hell
+
+      // step 1. I see a Rolex watch on Flipkart.
+      // step 2. I add it to the cart.
+      // step 3. I order the Rolex watch.
+      // step 4. I make the payment.
+      // step 5. The Rolex watch is delivered to my home.
+
+      function seewatch(watchname, callback) {
+        setTimeout(() => {
+          document.write(`I see a ${watchname} on Flipkart`);
+          document.write("<br>");
+          callback();
+        }, 2000);
+      }
+
+      function addtocart(watchname, callback) {
+        setTimeout(() => {
+          document.write(`I add it ${watchname} watch to the cart`);
+          document.write("<br>");
+          callback();
+        }, 2000);
+      }
+
+      function orderewtch(watchname, callback) {
+        setTimeout(() => {
+          document.write(`I ordered the ${watchname} watch.`);
+          document.write("<br>");
+          callback();
+        }, 2000);
+      }
+
+      function makepayment(callback) {
+        setTimeout(() => {
+          document.write(`I make payment of 10,000 rupees`);
+          document.write("<br>");
+          callback();
+        }, 2000);
+      }
+
+      function Delivered(watchname) {
+        setTimeout(() => {
+          document.write(`The ${watchname} watch is delivered to my home.`);
+          document.write("<br>");
+        }, 2000);
+      }
+
+      seewatch("Rolex", () => {
+        addtocart("Rolex", () => {
+          orderewtch("Rolex", () => {
+            makepayment(() => {
+              Delivered("Rolex", () => {}); // This is the callback hell (pyramid of doom.)
+            });
+          });
+        });
+      });
+
+
+
+      // Error handling in callback hell example.
+
+      function seewatch(watchname, callback) {
+        setTimeout(() => {
+          if (watchname) {
+            document.write(`I see a ${watchname} on Flipkart`);
+            document.write("<br>");
+            callback(null); // No error, so pass null
+          } else {
+            callback("Error: Watch name not provided");
+          }
+        }, 2000);
+      }
+
+      function addtocart(watchname, callback) {
+        setTimeout(() => {
+          if (watchname) {
+            document.write(`I do ${watchname} add to cart`);
+            document.write("<br>");
+            callback(null); // No error, so pass null
+          } else {
+            callback("Error: Watch name not provided for add to cart");
+          }
+        }, 2000);
+      }
+
+      function orderewtch(watchname, callback) {
+        setTimeout(() => {
+          if (watchname) {
+            document.write(`I ordered ${watchname} watch.`);
+            document.write("<br>");
+            callback(null); // No error, so pass null
+          } else {
+            callback("Error: Watch name not provided for ordering");
+          }
+        }, 2000);
+      }
+
+      function makepayment(callback) {
+        setTimeout(() => {
+          // Simulate a successful payment
+          const paymentSuccessful = true;
+
+          if (paymentSuccessful) {
+            document.write("I did payment of 10000 rupees");
+            document.write("<br>");
+            callback(null); // No error, so pass null
+          } else {
+            callback("Error: Payment failed");
+          }
+        }, 2000);
+      }
+
+      function Delivered(watchname, callback) {
+        setTimeout(() => {
+          if (watchname) {
+            document.write(
+              `${watchname} watch is successfully delivered at home.`
+            );
+            document.write("<br>");
+            callback(null); // No error, so pass null
+          } else {
+            callback("Error: Watch name not provided for delivery");
+          }
+        }, 2000);
+      }
+
+      seewatch("Rolex", (error) => {
+        if (error) {
+          document.write(error);
+          document.write("<br>");
+          return;
+        }
+        addtocart("Rolex",(error) => {
+          if (error) {
+            document.write(error);
+            document.write("<br>");
+            return;
+          }
+          orderewtch("Rolex", (error) => {
+            if (error) {
+              document.write(error);
+              document.write("<br>");
+              return;
+            }
+            makepayment((error) => {
+              if (error) {
+                document.write(error);
+                document.write("<br>");
+                return;
+              }
+              Delivered("Rolex", (error) => {
+                if (error) {
+                  document.write(error);
+                  document.write("<br>");
+                  return;
+                }
+                document.write("All steps completed successfully.");
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
